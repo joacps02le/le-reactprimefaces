@@ -1093,7 +1093,7 @@ export class Calendar extends Component {
             //                               tabIndex={this.props.tabindex}/>
 
             var inputElement = <InputMask ref={(el) => this.inputfield = ReactDOM.findDOMNode(el)} type="text"
-                                          required={this.props.required} mask="99/99/9999" 
+                                          required={this.props.required} mask="99/99/9999"
                                           onFocus={(e) => this.onInputFocus(this.inputfield, e)}
                                           onKeyDown={this.onInputKeydown.bind(this)}
                                           onClick={this.onInputClick.bind(this)}
