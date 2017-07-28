@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
+/* eslint-disable */
 import { InputText } from 'primereact/components/inputtext/InputText';
 import {InputMask} from 'primereact/components/inputmask/InputMask';
 import {Button} from 'primereact/components/button/Button';
@@ -467,6 +468,7 @@ export class Calendar extends Component {
     }
 
     onInputClick(event) {
+        debugger
         this.closeOverlay = false;
     }
 
@@ -1080,7 +1082,7 @@ export class Calendar extends Component {
         // placeholder={this.props.placeholder || ''}
 
         if (!this.props.inline) {
-            // var inputElement = <InputMask ref={(el) => this.inputfield = ReactDOM.findDOMNode(el)} type="text"
+            // var inputElement = <InputText ref={(el) => this.inputfield = ReactDOM.findDOMNode(el)} type="text"
             //                               required={this.props.required}
             //                               mask="99/99/9999" value={this.state.val3} placeholder="99/99/9999" slotChar="mm/dd/yyyy"
             //                               onFocus={(e) => this.onInputFocus(this.inputfield, e)}
@@ -1091,16 +1093,15 @@ export class Calendar extends Component {
             //                               className={this.props.inputStyleClass}
             //                                disabled={this.props.disabled}
             //                               tabIndex={this.props.tabindex}/>
-
             var inputElement = <InputMask ref={(el) => this.inputfield = ReactDOM.findDOMNode(el)} type="text"
-                                          required={this.props.required} mask="99/99/9999"
+                                          required={this.props.required} mask="99/99/9999"  value={this.state.val3}  placeholder="99/99/9999"  slotChar="mm/dd/yyyy"
                                           onFocus={(e) => this.onInputFocus(this.inputfield, e)}
                                           onKeyDown={this.onInputKeydown.bind(this)}
                                           onClick={this.onInputClick.bind(this)}
                                           onBlur={this.onInputBlur.bind(this)} readOnly={this.props.readonlyInput}
                                           onInput={this.onInput.bind(this)} style={this.props.inputStyle}
                                           className={this.props.inputStyleClass}
-                                          placeholder={this.props.placeholder || ''} disabled={this.props.disabled}
+                                          disabled={this.props.disabled}
                                           tabIndex={this.props.tabindex}/>
 
 

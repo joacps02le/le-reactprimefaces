@@ -13,6 +13,10 @@ class FormInitial extends React.Component {
         return '<i class="glyphicon glyphicon-usd"></i> ' + cell;
     }
 
+    onChangeIcon(e) {
+        this.setState({ date3: e.value });
+    }
+
     render() {
 
         let products = [{
@@ -43,7 +47,7 @@ class FormInitial extends React.Component {
                     </BootstrapTable>
 
                     <br/><br/>
-                    <Calendar/>
+                    <Calendar showIcon='true'  onChange={this.onChangeIcon.bind(this)}></Calendar>
                 </FormGroup>
             </div>
         );
